@@ -1,0 +1,26 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+}
+.searcher-container{
+    background: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.searcher-input{
+
+}

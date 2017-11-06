@@ -3,9 +3,8 @@ const path = require("path");
 
 const app = express();
 
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "main", "index.html"));
-});
+app.use(express.static(path.resolve(__dirname, "main")));
+
 
 app.listen(3000, () => {
     console.log("Running on port 3000");
