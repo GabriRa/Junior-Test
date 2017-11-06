@@ -22,5 +22,19 @@ function displayData(data){
             </div>
         </div>
         <div class='user-repos'>
+            <h4>Repositories</h4>
         </div>`
+    fetch(data.repos_url)
+        .then(response => response.json())
+        .then(data => displayRepos(data) )
+}
+
+function displayRepos(data){
+    let reposContainer = document.querySelector(".user-repos");
+    data.map( dataRepo => {
+        reposContainer.innerHTML += `
+        <div class="repo">
+            <h5>${dataRepo.name}</h5>
+        </div>`
+    })
 }
