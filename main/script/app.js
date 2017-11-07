@@ -13,10 +13,14 @@ button.addEventListener("click", (e) => {
 
 function displayData(data){
     let container = document.querySelector(".results-container");
+    if(data.message === "Not Found"){
+        return container.innerHTML = `<div class="error">User does not exist</div>`
+    }
     container.innerHTML = `
         <div class='user-info'> 
-            <img src=${data.avatar_url}>
+            <img src=${data.avatar_url} width="60" height="60">
             <div class="info">
+                <p>${data.name === null ? "" : data.name}</p>
                 <h3>${data.login}</h3>
                 <p>${data.bio === null ? "" : data.bio}</p>
             </div>
@@ -34,7 +38,9 @@ function displayRepos(data){
     data.map( dataRepo => {
         reposContainer.innerHTML += `
         <div class="repo">
-            <h5>${dataRepo.name}</h5>
+            <div class="repo-title"><a href=${dataRepo.html_url}>${dataRepo.name}</a></div> 
+            <div><span>${dataRepo.forks} <i class="fa fa-code-fork" aria-hidden="true"></i></span>
+            <span>${dataRepo.watchers}<i class="fa fa-star" aria-hidden="true"></i></span></div>
         </div>`
     })
 }

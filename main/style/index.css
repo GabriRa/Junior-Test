@@ -1,26 +1,82 @@
 body, html{
     height: 100%;
+    min-height: fit-content;
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #ccc
 }
 .main-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    height: 100%;
+    min-height: 100%;
+    height: fit-content;
     width: 100%;
-    background-color: #ccc;
+    padding: 4rem 0;
 }
-.searcher-container{
+.container{
     background: #fff;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
+    width: fit-content;
+    min-width: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.searcher-container{
 }
 .searcher-input{
+    height: 25px;
+}
+.searcher-send{
+    height: 31px;
+    display: block;
+    margin-left: 1rem;
+}
+.results-container{
+    margin-top: 2rem;
+    flex-flow: column;
+}
+.error{
+    width: 80%;
+    padding: 1rem;
+    background: rgba(200, 50, 50, .4);
+    border: 1px solid rgba(200, 50, 50, .4);
+    color: rgba(100, 50, 50, 1);
+    border-radius: 5px;
+}
+.user-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.info{
+    margin-left: 1rem;
+}
 
+.user-repos{
+    width: 100%;
+}
+.user-repos>h4{
+    border-bottom: 2px solid black;
+}
+.repo{
+    border-bottom: 2px solid rgba(155, 155, 155, .6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.repo-title{
+    font-weight: bold;
+    font-size: 12pt;
+}
+.repo-title>a{
+    color: inherit;
+    text-decoration: none;
 }
