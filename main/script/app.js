@@ -1,15 +1,18 @@
 const button = document.querySelector(".searcher-send"),
     input = document.querySelector(".searcher-input"),
+    searcherContainer = document.querySelector(".searcher-container"),
     api = "https://api.github.com/users/"
 
-button.addEventListener("click", (e) => {
-    e.preventDefault();
+button.addEventListener("click", (e) => submitUser(e));
+searcherContainer.addEventListener("submit", (e) => submitUser(e))
 
+function submitUser(event)  {
+    event.preventDefault();
     let query = api + input.value;
     fetch(`${api}${input.value}`)
         .then( response => response.json())
         .then( data => displayData(data))
-});
+}
 
 function displayData(data){
     let container = document.querySelector(".results-container");

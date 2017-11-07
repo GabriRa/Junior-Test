@@ -1,0 +1,25 @@
+{
+  "name": "junior-front",
+  "version": "1.0.0",
+  "description": "A test",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jasmine": "^2.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabriRa/Junior-Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabriRa/Junior-Test/issues"
+  },
+  "homepage": "https://github.com/GabriRa/Junior-Test#readme"
+}
